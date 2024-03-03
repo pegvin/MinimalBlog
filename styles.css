@@ -25,14 +25,14 @@
 	--text: #E8E8E8;
 	--bg: #050501;
 
-	--link-fg: #1f8fff;
+	--link-fg: #3185FC;
 	--link-fg-hover: #3399ff;
 
 	--mark-fg: var(--bg);
 	--mark-bg: hsl(51 100% 70%);
 
 	--selection-fg: #000;
-	--selection-bg: hsl(35 100% 70%);
+	--selection-bg: hsl(45 100% 70%);
 }
 
 @media screen and (max-width: 832px /* 16 * 52 */) {
