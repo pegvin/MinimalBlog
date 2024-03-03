@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 16px;
+}
+
+@media screen and (max-width: 832px /* 16 * 52 */) {
+	:root {
+		font-size: 14px;
+	}
+	body {
+		padding: 0 0.7rem;
+	}
+}
+
+::selection, ::-moz-selection {
+	color: #FFF;
+	background: #00C;
+}
+
+body {
+	display: block;
+	width: 100%;
+	max-width: 832px;
+	background: #FFFFFB;
+	margin: 0 auto;
+
+	font-size: 1.2rem;
+	font-family: 'Noto Sans Mono', monospace;
+	font-optical-sizing: auto;
+	text-rendering: optimizeSpeed;
+	line-height: 135%;
+
+	white-space: normal;
+	word-break: break-word;
+	overflow-wrap: break-word;
+	hyphens: none;
+
+	image-rendering: pixelated;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	font-family: "Poppins", sans-serif;
+	line-height: 150%;
+}
+
+a, a:visited {
+	color: #00E;
+	text-decoration: none;
+	text-decoration-color: #00E;
+	text-underline-offset: 0.25rem;
+}
+
+a:hover {
+	color: #00F;
+	text-decoration: underline;
+	text-decoration-color: #00F;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+mark {
+	background: hsl(51 100% 70%);
+	padding: 0.05rem 0.15rem;
+}
+
+blockquote {
+	border-left: 0.3rem solid #00E;
+	margin-left: 1.2rem;
+	padding-left: 0.6rem;
+}
+
+pre, code:not(pre code) {
+	border: 1px solid #00E;
+	font-family: monospace;
+	font-size: 1.05rem;
+}
+
+pre {
+	overflow: auto;
+	padding: 0.6rem 0.7rem;
+}
+
+code:not(pre code) {
+	line-height: 200%;
+	padding: 0.2rem 0.35rem;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid #000;
+}
+
+hr:has(~ footer):last-of-type {
+	margin: 2.5rem 0 1rem 0;
+}
+
+header, footer {
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+header {
+	margin-top: 0.5rem;
+}
+
+header nav a {
+	padding: 0;
+}
+
+header nav a:not(:last-of-type) {
+	border-right: 1px solid #000;
+	padding-right: 0.7rem;
+}
+
+header nav a:not(:first-of-type) {
+	padding-left: 0.7rem;
+}
