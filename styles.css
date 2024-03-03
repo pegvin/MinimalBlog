@@ -2,6 +2,7 @@
 
 * {
 	box-sizing: border-box;
+	transition: all 0.08s linear;
 }
 
 :root {
@@ -18,8 +19,8 @@
 }
 
 ::selection, ::-moz-selection {
-	color: #FFF;
-	background: #00C;
+	color: #000;
+	background: hsl(40 100% 70%);
 }
 
 body {
@@ -60,6 +61,26 @@ a:hover {
 	color: #00F;
 	text-decoration: underline;
 	text-decoration-color: #00F;
+}
+
+button {
+	font-size: 1rem;
+	font-family: "Poppins", sans-serif;
+	outline: none;
+	border: 3px solid hsl(45, 100%, 70%);
+	background: none;
+	padding: 0.5rem 0.7rem;
+	cursor: pointer;
+}
+
+button:hover {
+	background: hsl(45, 100%, 70%);
+	border-color: hsl(45, 100%, 70%);
+}
+
+button:active {
+	background: hsl(40, 100%, 70%);
+	border-color: hsl(40, 100%, 70%);
 }
 
 img {
