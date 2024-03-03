@@ -7,6 +7,32 @@
 
 :root {
 	font-size: 16px;
+
+	--text: #000;
+	--bg: #FFFFFB;
+
+	--link-fg: #00E;
+	--link-fg-hover: #00F;
+
+	--mark-fg: var(--text);
+	--mark-bg: hsl(51 100% 70%);
+
+	--selection-fg: var(--text);
+	--selection-bg: hsl(40 100% 70%);
+}
+
+:root.dark {
+	--text: #E8E8E8;
+	--bg: #131214;
+
+	--link-fg: #1f8fff;
+	--link-fg-hover: #3399ff;
+
+	--mark-fg: var(--bg);
+	--mark-bg: hsl(51 100% 70%);
+
+	--selection-fg: #000;
+	--selection-bg: hsl(35 100% 70%);
 }
 
 @media screen and (max-width: 832px /* 16 * 52 */) {
@@ -19,16 +45,18 @@
 }
 
 ::selection, ::-moz-selection {
-	color: #000;
-	background: hsl(40 100% 70%);
+	color: var(--selection-fg);
+	background: var(--selection-bg);
 }
 
 body {
 	display: block;
 	width: 100%;
 	max-width: 832px;
-	background: #FFFFFB;
 	margin: 0 auto;
+
+	color: var(--text);
+	background: var(--bg);
 
 	font-size: 1.2rem;
 	font-family: 'Noto Sans Mono', monospace;
@@ -51,36 +79,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:visited {
-	color: #00E;
+	color: var(--link-fg);
+	text-decoration-color: var(--link-fg);
 	text-decoration: none;
-	text-decoration-color: #00E;
 	text-underline-offset: 0.25rem;
 }
 
 a:hover {
-	color: #00F;
+	color: var(--link-fg-hover);
+	text-decoration-color: var(--link-fg-hover);
 	text-decoration: underline;
-	text-decoration-color: #00F;
-}
-
-button {
-	font-size: 1rem;
-	font-family: "Poppins", sans-serif;
-	outline: none;
-	border: 3px solid hsl(45, 100%, 70%);
-	background: none;
-	padding: 0.5rem 0.7rem;
-	cursor: pointer;
-}
-
-button:hover {
-	background: hsl(45, 100%, 70%);
-	border-color: hsl(45, 100%, 70%);
-}
-
-button:active {
-	background: hsl(40, 100%, 70%);
-	border-color: hsl(40, 100%, 70%);
 }
 
 img {
@@ -89,18 +97,19 @@ img {
 }
 
 mark {
-	background: hsl(51 100% 70%);
+	color: var(--mark-fg);
+	background: var(--mark-bg);
 	padding: 0.05rem 0.15rem;
 }
 
 blockquote {
-	border-left: 0.3rem solid #00E;
+	border-left: 0.3rem solid var(--link-fg);
 	margin-left: 1.2rem;
 	padding-left: 0.6rem;
 }
 
 pre, code:not(pre code) {
-	border: 1px solid #00E;
+	border: 1px solid var(--link-fg);
 	font-family: monospace;
 	font-size: 1.05rem;
 }
@@ -117,7 +126,7 @@ code:not(pre code) {
 
 hr {
 	border: none;
-	border-top: 1px solid #000;
+	border-top: 1px solid var(--text);
 }
 
 hr:has(~ footer):last-of-type {
@@ -138,7 +147,7 @@ header nav a {
 }
 
 header nav a:not(:last-of-type) {
-	border-right: 1px solid #000;
+	border-right: 1px solid var(--text);
 	padding-right: 0.7rem;
 }
 
